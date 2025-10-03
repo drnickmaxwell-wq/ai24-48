@@ -1,1 +1,6 @@
+/* BUILDPROBE-GREEN 2025-10-03 07:30 */
+@import "tailwindcss";
+:root { --probe: 1; }
+body { margin: 0; }
+/* EOF */
 
