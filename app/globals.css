@@ -1,0 +1,29 @@
+@import "tailwindcss";
+:root{
+  --brand-magenta:#C2185B; --brand-turquoise:#40C4B4; --brand-gold:#D4AF37;
+  --background:#F7F7F9; --foreground:#1A1C1F; --max-width:1200px;
+}
+*,*::before,*::after{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{ margin:0; background:var(--background); color:var(--foreground); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; line-height:1.6; }
+.text-lux-gradient{
+  background:linear-gradient(90deg,var(--brand-magenta),var(--brand-turquoise));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.shimmer{ position:relative; overflow:hidden; }
+.shimmer::before{
+  content:""; position:absolute; inset:0; transform:translateX(-100%);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);
+  animation:lux-shimmer 2s linear infinite;
+}
+@keyframes lux-shimmer{ to{ transform:translateX(100%);} }
+.btn-coastal{ position:relative; overflow:hidden; transition:transform .25s ease, box-shadow .25s ease; }
+.btn-coastal:hover{ transform:translateY(-2px); }
+.btn-coastal::before{ content:""; position:absolute; inset:0; left:-100%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent); transition:left .5s ease; }
+.btn-coastal:hover::before{ left:100%; }
+.container-luxury{ max-width:var(--max-width); margin-inline:auto; padding-inline:1rem; }
+@media (prefers-reduced-motion: reduce){
+  *{ animation:none !important; transition:none !important; scroll-behavior:auto !important; }
+  .shimmer::before{ display:none !important; }
+  .btn-coastal:hover{ transform:none !important; }
+}

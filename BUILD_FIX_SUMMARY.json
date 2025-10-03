@@ -1,0 +1,12 @@
+{
+  "changed": [
+    "globals.css: /mnt/data/ai24-48_v2_repo/app/globals.css",
+    "lux-composite.css: /mnt/data/ai24-48_v2_repo/styles/preview/lux-composite.css",
+    "lux-pages.css: /mnt/data/ai24-48_v2_repo/styles/preview/lux-pages.css",
+    "added: /mnt/data/ai24-48_v2_repo/public/icons/icon-192.png",
+    "added: /mnt/data/ai24-48_v2_repo/public/icons/icon-512.png"
+  ],
+  "notes": [
+    "root=/mnt/data/ai24-48_v2_repo"
+  ]
+}
